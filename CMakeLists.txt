@@ -21,7 +21,8 @@ set(SHADERS_DIR "${RES_DIR}/shaders")
 
 add_executable(VK_RM
 	src/main.cpp
-	src/app.cpp
+	src/engine/app.cpp
+	src/rendering/renderer.cpp
 )
 target_include_directories(VK_RM PRIVATE include)
 target_link_libraries(VK_RM PRIVATE
@@ -39,6 +40,6 @@ target_compile_definitions(VK_RM PRIVATE
 	RES_DIR="${RES_DIR}"
 	SHADERS_DIR="${SHADERS_DIR}"
 )
-# target_sources(VK_RM PRIVATE
-# 	${CMAKE_CURRENT_LIST_DIR}/res/shaders/main.slang
-# )
+target_sources(VK_RM PRIVATE
+	${CMAKE_CURRENT_LIST_DIR}/res/shaders/main.slang
+)

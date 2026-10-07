@@ -1,6 +1,8 @@
 #include <print>
 
-#include "app.hpp"
+#include "engine/app.hpp"
+
+using namespace VK_RM;
 
 void App::Init()
 {

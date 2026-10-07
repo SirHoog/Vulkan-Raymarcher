@@ -10,7 +10,7 @@
 			"name": "default",
 			"displayName": "Default",
 			"generator": "Visual Studio 18 2026",
-			"binaryDir": "${sourceDir}/build/default",
+			"binaryDir": "${sourceDir}/out/build/default",
 			"cacheVariables": {
 				"CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
 			}

@@ -1,7 +1,9 @@
-#include "app.hpp"
+#include "engine/app.hpp"
 
 int main()
 {
+    using namespace VK_RM; // Vulkan Raymarching (VK_RM)
+
     App app;
 
 	app.Init();
