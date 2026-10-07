@@ -1,0 +1,34 @@
+﻿{
+	"version": 6,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 24
+	},
+
+	"configurePresets": [
+		{
+			"name": "default",
+			"displayName": "Default",
+			"generator": "Visual Studio 18 2026",
+			"binaryDir": "${sourceDir}/build/default",
+			"cacheVariables": {
+				"CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+			}
+		}
+	],
+
+	"buildPresets": [
+		{
+			"name": "debug",
+			"displayName": "Debug",
+			"configurePreset": "default",
+			"configuration": "Debug"
+		},
+		{
+			"name": "release",
+			"displayName": "Release",
+			"configurePreset": "default",
+			"configuration": "Release"
+		}
+	]
+}

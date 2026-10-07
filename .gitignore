@@ -1,3 +1,10 @@
+# Dev End
+.vs
+out
+build
+CMakeUserPresets.json
+.editorconfig
+
 # Prerequisites
 *.d
 
