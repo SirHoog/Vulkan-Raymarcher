@@ -1,10 +1,10 @@
 # Vulkan Raymarcher
-A raymarcher using Vulkan in C++
+A 3D raymarcher using Vulkan in C++
 
 ## Description
 
 ### What?
-A raymarching renderering engine in C++ using Vulkan, SDL3, and Slang. See [Features](#Features) for more info.
+A 3D raymarching rendering engine in C++ using Vulkan, SDL3, and Slang. See [Features](#Features) for more info.
 
 ### Why?
 For a [HackClub Stardance](https://hackclub.com/stardance) project
