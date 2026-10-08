@@ -21,13 +21,13 @@ set(SHADERS_DIR "${RES_DIR}/shaders")
 
 add_executable(VK_RM
 	src/main.cpp
-	src/engine/app.cpp
-	src/rendering/renderer.cpp
+	src/app/app.cpp
+	src/rendering/renderer-init.cpp
+	src/rendering/renderer-main.cpp
 )
 target_include_directories(VK_RM PRIVATE include)
 target_link_libraries(VK_RM PRIVATE
 	SDL3::SDL3
-	Vulkan::Vulkan
 	Vulkan::volk
 	GPUOpen::VulkanMemoryAllocator
 	slang::slang

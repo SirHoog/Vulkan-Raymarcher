@@ -1,17 +1,19 @@
-#include <print>
-
-#include "engine/app.hpp"
+#include "app/app.hpp"
 
 using namespace VK_RM;
+using namespace AppCfg;
 
 void App::Init()
 {
-	// SDL_CHECK(SDL_Init(SDL_INIT_VIDEO));
-	// m_window = SDL_CreateWindow("Vulkan Raymarcher", m_screenWidth, m_screenHeight, WINDOW_FLAGS);
-	// SDL_CHECK_NULL(m_window);
+	if (!SDL_Init(SDL_INIT_VIDEO))
+		FatalError("Failed to initialize SDL. {}", SDL_GetError());
 
-	// m_renderer.Init(m_window);
-	// m_engine  .Init();
+	m_window = SDL_CreateWindow("Vulkan Raymarcher", INIT_SCREEN_WIDTH, INIT_SCREEN_HEIGHT, WINDOW_FLAGS);
+	
+	if (!m_window)
+		FatalError("Failed to create SDL window. {}", SDL_GetError());
+
+	m_renderer.Init(m_window);
 	// m_ui      .Init();
 }
 void App::Run()
@@ -32,8 +34,6 @@ void App::Shutdown()
 
 void App::Events()
 {
-	std::println("Test");
-
 	// SDL_Event event;
 	// while (SDL_PollEvent(&event))
 	// {

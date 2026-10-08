@@ -46,9 +46,9 @@ namespace VK_RM
 
 		//Slang::ComPtr<slang::IGlobalSession> m_globalSession;
 
-		//// Queue family indices
-		//Uint32 m_present  = UINT32_MAX;
-		//Uint32 m_graphics = UINT32_MAX;
+		// Queue family indices
+		Uint32 m_present  = UINT32_MAX;
+		Uint32 m_graphics = UINT32_MAX;
 
 		//// Swapchain details
 		//VkSurfaceFormatKHR m_format     {};
@@ -74,7 +74,7 @@ namespace VK_RM
 		void InitPipelineLayout();
 		void InitGraphicsPipeline();
 		void InitSync();
-		void InitCommandContexts();
+		void InitCommandBuffers();
 
 		// Shutdown
 		void DestroySwapchain();

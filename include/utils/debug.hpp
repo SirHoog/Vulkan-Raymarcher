@@ -4,7 +4,7 @@
 #include <format>
 #include <string_view>
 
-#include <vulkan/vulkan.h>
+#include <Volk/volk.h>
 #include <slang/slang.h>
 
 // Helper functions/macros for error handling and debugging
